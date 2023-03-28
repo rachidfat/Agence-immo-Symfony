@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <title>{% block title %}Agence{% endblock %}</title>
+
+        <!-- Favicons -->
+
+        <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+        <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {% block stylesheets %}
+            {# {{ encore_entry_link_tags('app') }} #}
+            <!-- Vendor CSS Files -->
+            <link href="{{ asset('assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+            <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+            <!-- Template Main CSS File -->
+            <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+            
+        {% endblock %}
+    </head>
+    
+    <body>
+        {% include "layouts/partials/property_search_section.html.twig" %}
+        
+        {% include "layouts/partials/nav.html.twig" %}
+        
+        {% block body %}
+
+        {% endblock %}
+        
+        {% include "layouts/partials/footer.html.twig" %}
+
+        {% include "layouts/partials/back_to_top.html.twig" %}
+
+        {% block javascripts %}
+            {# {{ encore_entry_script_tags('app') }} #}
+             <!-- Vendor JS Files -->
+            <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+            <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+            <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+            <!-- Template Main JS File -->
+            <script src="{{ asset('assets/js/main.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
